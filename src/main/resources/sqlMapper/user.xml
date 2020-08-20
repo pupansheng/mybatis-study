@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pps.mapper.UserMapper">
+
+    <resultMap type="user" id="map1">
+        <result property="age2" column="age" jdbcType="INTEGER"/>
+
+    </resultMap>
+
+    <!-- 在 映射文件中配置很多sql语句 -->
+    <!-- 将sql语句封装到mappedStatement对象中，所以将id称为statement的id -->
+    <!-- parameterType：指定输入 参数的类型，这里指定int型 #{}表示一个占位符号 -->
+    <!-- #{id}：其中的id表示接收输入 的参数，参数名称就是id，如果输入 -->
+    <!-- 参数是简单类型，#{}中的参数名可以任意，可以value或其它名称 -->
+    <!-- resultType：指定sql输出结果 的所映射的java对象类型，select指定resultType表示将单条记录映射成的java对象。 -->
+    <select id="findUserById" parameterType="int"  resultType="java.util.HashMap">
+		SELECT * FROM lock1 WHERE id=#{value}
+	</select>
+
+    <select id="insert" parameterType="user">
+		insert into lock1(id,name) values(#{id},#{name})
+	</select>
+
+</mapper>

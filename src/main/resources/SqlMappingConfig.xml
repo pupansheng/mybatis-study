@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 加载属性文件 -->
+    <properties resource="db.properties" >
+        <!--properties中还可以配置一些属性名和属性值 -->
+        <!-- <property name="jdbc.driver" value=""/> -->
+    </properties>
+
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+    </settings>
+    <!-- 全局配置参数，需要时再设置 -->
+    <!-- <settings> </settings> -->
+
+    <typeAliases>
+        <!-- 别名定义 -->
+        <!-- 针对单个别名定义 type：类型的路径 alias：别名 -->
+        <!-- <typeAlias type="cn.czy.mybatis.po.User" alias="user"/> -->
+        <typeAlias type="com.pps.entity.User" alias="user" />
+        <!-- 批量别名定义 指定包名，mybatis自动扫描包中的po类，自动定义别名，别名就是类名（首字母大写或小写都可以） -->
+        <package name="com.pps.mapper" />
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.pps.core.plug.MyInterceptor">
+            <property name="idStrategy" value="100"/>
+        </plugin>
+    </plugins>
+    <!-- 和spring整合后 environments配置将废除 -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 使用jdbc事务管理，事务控制由mybatis -->
+            <transactionManager type="JDBC" />
+            <!-- 数据库连接池，由mybatis管理 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+
+  
+    <!-- 加载 映射文件 -->
+    <mappers>
+
+        <!--通过resource方法一次加载一个映射文件 -->
+        <mapper resource="sqlMapper/user.xml" />
+
+        <!-- 批量加载mapper 指定mapper接口的包名，mybatis自动扫描包下边所有mapper接口进行加载 -->
+        <!-- 遵循一些规范：需要将mapper接口类名和mapper.xml映射文件名称保持一致，且在一个目录 -->
+        <!-- 中 上边规范的前提是：使用的是mapper代理方法
+        <package name="cn.com.czy.mybatis.two.mapper" />-->
+
+    </mappers>
+
+</configuration>

@@ -1,0 +1,10 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8·••¥À.
+K
+java:S3740"/Provide the parametrized type for this generic.(ò”ßl8Ê–ÿ«À.
+M
+java:S1128"0Remove this unused import 'com.pps.entity.User'.(ßõ™›8Ê–ÿ«À.
+e
+java:S1128"HRemove this unused import 'org.apache.ibatis.session.SqlSessionFactory'.(ÚÖ¦©8·••¥À.
+Z
+java:S1197"8Move the array designator from the variable to the type.(²Á€œüÿÿÿÿ8·••¥À.

@@ -1,0 +1,25 @@
+
+_
+java:S1128"=Remove this unused import 'org.apache.ibatis.cache.CacheKey'.(¤Í½êøÿÿÿÿ8‹õ”¥À.
+h
+java:S1128"FRemove this unused import 'org.apache.ibatis.mapping.MappedStatement'.(÷€¨Ïûÿÿÿÿ8‹õ”¥À.
+N
+java:S16027",Remove useless curly braces around statement(¸·›˜üÿÿÿÿ8‹õ”¥À.
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(ðÄ“æþÿÿÿÿ8‹õ”¥À.
+\
+java:S1128"?Remove this unused import 'org.apache.ibatis.mapping.BoundSql'.(ƒ÷Œº8‹õ”¥À.
+b
+java:S1128"@Remove this unused import 'org.apache.ibatis.executor.Executor'.(¯‘¤…ùÿÿÿÿ8‹õ”¥À.
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(Îµ¸Ö8‹õ”¥À.
+b
+java:S1128"@Remove this unused import 'org.apache.ibatis.session.RowBounds'.(²Ïÿ„ÿÿÿÿÿ8‹õ”¥À.
+^
+java:S1481""<Remove this unused "defaultParameterHandler" local variable.(Ê˜âÿÿÿÿÿ8þ¢õ©À.
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(”Ð•êÿÿÿÿÿ8‹õ”¥À.
+a
+java:S1128
+"DRemove this unused import 'org.apache.ibatis.session.ResultHandler'.(ëÆ»ã8‹õ”¥À.
+m
+java:S1854""KRemove this useless assignment to local variable "defaultParameterHandler".(Ê˜âÿÿÿÿÿ8þ¢õ©À.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(óšæàúÿÿÿÿ8‹õ”¥À.
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(ß”Ÿ§ùÿÿÿÿ8‹õ”¥À.
